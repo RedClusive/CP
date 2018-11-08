@@ -13,7 +13,7 @@ struct segtree {
         return a + b;
     }
 
-    T get(int l, int r) {  // sum on interval [l, r)
+    T get(int l, int r) { 
         T res = 0;
         l += n, r += n;
         while (l < r) {
