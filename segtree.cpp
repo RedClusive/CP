@@ -1,4 +1,4 @@
-template<class T>
+template<typename T>
 struct segtree {
 
     int n;
