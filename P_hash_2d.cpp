@@ -54,7 +54,7 @@ struct P_matrix {
         for (int k = 0; k < kek; ++k) {
             tmp.push_back(get(u, l, d, r, k));
         }
-        return move(tmp);
+        return tmp;
     }
 
     int get_changed(int i, int j, char c, int k) {
@@ -69,7 +69,7 @@ struct P_matrix {
         for (int k = 0; k < kek; ++k) {
             tmp.push_back(get_changed(i, j, c, k));
         }
-        return move(tmp);
+        return tmp;
     }
 
     void outst(int k) {
