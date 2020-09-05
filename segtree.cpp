@@ -9,7 +9,7 @@ struct segtree {
         t.resize(n << 1, 0);
     }
 
-    T op(T a, T b) {
+    T op(const T& a, const T& b) {
         return a + b;
     }
 
@@ -24,11 +24,10 @@ struct segtree {
         return res;
     }
 
-    void upd(int v, T x) {
+    void upd(int v, const T& x) {
         v += n;
         t[v] = x;
-        while (v > 1) {
-            v >>= 1;
+        while (v >>= 1) {
             t[v] = op(t[v << 1], t[v << 1 | 1]);
         }
     }
